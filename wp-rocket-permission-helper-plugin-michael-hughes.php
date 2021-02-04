@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
   *    • 'rocket_generate_advanced_cache_file'
    *
    */
-  if (( ( ! (bool) apply_filters( 'rocket_set_wp_cache_constant', false ) )  || ( ! (bool) apply_filters( 'rocket_generate_advanced_cache_file', false ) )  ) && ( ! function_exists( 'nocache_config_remove_permission_error' ) ))
+  if (( ( ! (bool) apply_filters( 'rocket_set_wp_cache_constant', true ) )  || ( ! (bool) apply_filters( 'rocket_generate_advanced_cache_file', true ) )  ) && ( ! function_exists( 'nocache_config_remove_permission_error' ) ))
   {
 
     add_action( 'admin_head', 'nocache_config_remove_permission_error' );
